@@ -1,5 +1,5 @@
-const { Builder, By, until } = require("selenium-webdriver");
-const chrome = require("selenium-webdriver/chrome");
+import { Builder, By, until } from "selenium-webdriver";
+import { Options } from "selenium-webdriver/chrome";
 
 (async () => {
   const url = process.argv[2] ?? "https://dev.amidstyle.com";
@@ -7,8 +7,8 @@ const chrome = require("selenium-webdriver/chrome");
   console.log(sign);
 })();
 
-async function getSign(url, options = []) {
-  const driverOptions = new chrome.Options();
+async function getSign(url: string, options: string[]): Promise<string> {
+  const driverOptions = new Options();
 
   options.forEach((o) => {
     driverOptions.addArguments(o);
