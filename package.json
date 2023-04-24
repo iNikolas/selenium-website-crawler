@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node dist/index.js",
     "start-dev": "yarn ts-node src/index.ts",
-    "build": "npx tsc",
+    "build": "yarn tsc",
     "postinstall": "yarn build"
   },
   "devDependencies": {
